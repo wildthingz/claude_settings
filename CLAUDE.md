@@ -1,7 +1,21 @@
 # Global CLAUDE.md
-> This file lives in the Obsidian vault at `~/.obsidian/remote_notes/claude/CLAUDE.md`
-> and is symlinked to `~/.claude/CLAUDE.md`. Obsidian Sync keeps it in sync across devices.
-> On a new machine, run: `ln -sf ~/.obsidian/remote_notes/claude/CLAUDE.md ~/.claude/CLAUDE.md`
+> Claude Code config lives in `~/.obsidian/remote_notes/claude/` and is synced via
+> Obsidian Sync + Git (git@gitlab.com:hateaf/claude_settings.git).
+>
+> **New machine setup:**
+> ```sh
+> cd ~/.obsidian/remote_notes/
+> git clone git@gitlab.com:hateaf/claude_settings.git claude
+> mkdir -p ~/.claude
+> ln -sf ~/.obsidian/remote_notes/claude/CLAUDE.md ~/.claude/CLAUDE.md
+> ln -sf ~/.obsidian/remote_notes/claude/settings.json ~/.claude/settings.json
+> ln -sf ~/.obsidian/remote_notes/claude/commands ~/.claude/commands
+> ```
+>
+> **Synced files:**
+> - `CLAUDE.md` — global instructions
+> - `settings.json` — status line config
+> - `commands/` — custom slash commands
 
 ## Language & Style
 - Primary language: C++
