@@ -1,0 +1,6 @@
+{
+  "statusLine": {
+    "type": "command",
+    "command": "input=$(cat); model=$(echo \"$input\" | jq -r '.model.display_name'); remaining=$(echo \"$input\" | jq -r '.context_window.remaining_percentage // empty'); if [ -n \"$remaining\" ]; then used=$(echo \"$input\" | jq -r '.context_window.used_percentage'); filled=$(printf \"%.0f\" \"$(echo \"scale=0; $used * 20 / 100\" | bc)\"); empty=$((20 - filled)); r=0; g=0; if [ \"$filled\" -le 10 ]; then r=$((filled * 25)); g=255; else g=$(( (20 - filled) * 25 )); r=255; fi; bar=\"\"; for ((i=0; i<filled; i++)); do ci=$i; if [ \"$ci\" -le 10 ]; then cr=$((ci * 25)); cg=255; else cg=$(( (20 - ci) * 25 )); cr=255; fi; bar+=\"\\033[38;2;${cr};${cg};0m▪\"; done; for ((i=0; i<empty; i++)); do bar+=\"\\033[38;2;60;60;60m·\"; done; bar+=\"\\033[0m\"; printf \"%s │ ctx ${bar} \\033[38;2;${r};${g};0m%.0f%%\\033[0m\" \"$model\" \"$used\"; else printf \"%s │ ctx ready\" \"$model\"; fi"
+  }
+}
