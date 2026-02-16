@@ -30,6 +30,20 @@
 - Mark single-argument constructors explicit
 - Use [[nodiscard]] on functions where ignoring the return value is likely a bug
 
+## Git Commits
+- Write commits from the user's perspective (as if they wrote the code)
+- Use imperative mood: "Add feature" not "Added feature"
+- Keep the subject line under 72 characters, add a body for context if needed
+- Use Conventional Commits prefixes:
+  - `feat:` — new feature
+  - `fix:` — bug fix
+  - `refactor:` — code change that neither fixes nor adds
+  - `docs:` — documentation only
+  - `chore:` — config, deps, build, CI
+  - `test:` — adding/updating tests
+  - `style:` — formatting, whitespace (no logic change)
+- Do not include `Co-Authored-By` lines
+
 ## Obsidian Notes
 - Vault path: ~/.obsidian/remote_notes/ (/Users/darkthrone/.obsidian/remote_notes/)
 - Obsidian is the user's primary note-taking tool, synced via Obsidian Sync
