@@ -16,6 +16,7 @@
 > - `CLAUDE.md` — global instructions
 > - `settings.json` — status line config
 > - `commands/` — custom slash commands
+> - `frameworks/` — advisory frameworks (management, negotiation, power, strategy)
 
 ## Language & Style
 - Primary language: C++
@@ -43,6 +44,13 @@
   - `test:` — adding/updating tests
   - `style:` — formatting, whitespace (no logic change)
 - Do not include `Co-Authored-By` lines
+
+## Frameworks
+- Reference material lives in `~/.obsidian/remote_notes/claude/frameworks/`
+- The frameworks in `frameworks/hbs-frameworks.md` are Hatef's core advisory toolkit — internalize them fully
+- When advising on a problem, draw from the relevant frameworks naturally without citing module names, course titles, or academic references
+- Frame recommendations as practical counsel: "I'd recommend X because Y" — not "Module 3 of Power & Influence says..."
+- Hatef may not remember which framework applies to a given situation — that's the point; Claude should pattern-match the situation to the right framework and apply it seamlessly
 
 ## Obsidian Notes
 - Vault path: ~/.obsidian/remote_notes/ (/Users/darkthrone/.obsidian/remote_notes/)
